@@ -59,21 +59,21 @@ struct ContentView: View {
             }
 
         }
-        .task {
-            do {
-                cars = try await getCars()
-            } catch MLAPIErrors.InvalidAPIData {
-                print("InvalidAPIData error")
-            } catch MLAPIErrors.invalidAPIResponse {
-                print("invalidAPIResponse error")
-            } catch MLAPIErrors.invalidURL {
-                print("invalidURL error")
-            } catch {
-                print(error)
-                print("unexpected error")
-            }
-
-        }
+//        .task {
+//            do {
+//                cars = try await getCars()
+//            } catch MLAPIErrors.InvalidAPIData {
+//                print("InvalidAPIData error")
+//            } catch MLAPIErrors.invalidAPIResponse {
+//                print("invalidAPIResponse error")
+//            } catch MLAPIErrors.invalidURL {
+//                print("invalidURL error")
+//            } catch {
+//                print(error)
+//                print("unexpected error")
+//            }
+//
+//        }
       
     }
     func getCars() async throws -> [AutoCar] {
